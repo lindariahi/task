@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculatrice</title>
+  </head>
+  <body>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+    </ul>
+    X<input type="text" name="" id="X" />
+    <br />
+    Y<input type="text" name="" id="Y" />
+    <button onclick="showresult1()">Addition</button>
+    <button onclick="showresult2()">Multiplication</button>
+    <button onclick="showresult3()">Substraction</button>
+    <button onclick="showresult4()">Division</button>
+    <h3></h3>
+
+    <script>
+      let x = document.querySelector("#X");
+      let y = document.querySelector("#Y");
+      function showresult1() {
+        document.querySelector("h3").innerHTML = somme(
+          Number(x.value),
+          Number(y.value)
+        );
+      }
+      function somme(x, y) {
+        return "result: " + (x + y);
+      }
+      function showresult2() {
+        document.querySelector("h3").innerHTML = product(
+          Number(x.value),
+          Number(y.value)
+        );
+      }
+      function product(x,y){
+        return "result : " +(x*y)
+      }
+      function showresult3() {
+        document.querySelector("h3").innerHTML = differnce(
+          Number(x.value),
+          Number(y.value)
+        );
+      }
+      function differnce(x,y){
+        return "result : " +(x-y)
+      }
+      function showresult4() {
+        document.querySelector("h3").innerHTML = quotient(
+          Number(x.value),
+          Number(y.value)
+        );
+      }
+      function quotient(x,y){
+        return "result : " +(x/y)
+      }
+
+
+
+    </script>
+  </body>
+</html>
